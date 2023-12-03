@@ -1,0 +1,7 @@
+# Don't include the binaries and build artifacts,
+#  they are too big and not interesting.
+#  Instructions for building are give in the README.md
+/day1/main
+/day1/part1
+
+# NB: The rust projects have thier own .gitignore
