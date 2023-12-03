@@ -3,5 +3,7 @@
 #  Instructions for building are give in the README.md
 /day1/main
 /day1/part1
-
+# ignore all ide folders
+.vscode/
+.idea/
 # NB: The rust projects have thier own .gitignore
