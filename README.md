@@ -1,5 +1,5 @@
 # Advent of Code 2023 solutions
-Click on the day to go to the folder with the solution, open up a terminal and run the commands given.
+To try it out, clone this repository with git, click on the day to go to the folder with the solution, open up a terminal and run the commands given.
 
 ### [Day 1](./day1)
 Written with the Fasm assembler in x86_64 assembly in windows subsystem for linux. This will only work on x86_64 aka AMD64 processors .Should run fine in Linux.
