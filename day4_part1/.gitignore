@@ -1,0 +1,6 @@
+# Ignore visual studio nonsense
+/.idea
+/.vs
+/bin
+/obj
+/

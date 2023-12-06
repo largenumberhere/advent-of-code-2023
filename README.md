@@ -25,3 +25,8 @@ Run with `cargo run input-file.txt`, where `input-file.txt` is the problem input
 ### [Day 3 part 1](./day3_part1)
 Written in rust
 Run with `cargo run input-file.txt` where `input-file.txt` is the problem input.
+
+### [Dary 4 part 1](./day4_part1)
+Written in C#
+Requires dotnet to be installed. 
+Run with `dotnet run ./input-file.txt` where `input-file.txt` is the problem input.
