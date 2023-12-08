@@ -1,0 +1,10 @@
+# ignore build and cache files
+/target
+Cargo.lock
+
+# ide nonsense
+/.idea
+
+# personal nonsense
+/exe
+
