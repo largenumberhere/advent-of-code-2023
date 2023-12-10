@@ -35,3 +35,15 @@ Run with `dotnet run ./input-file.txt` where `input-file.txt` is the problem inp
 Written in Rust
 Input file is hardcoded, change it in main.rs if you like. 
 Run with `cargo run`
+
+### [Day 9 part1](./day9_part1)
+Written in Rust
+Input file defaults to `input_sample.txt`, otherwise pass in a file name like so `cargo run -- my_input.txt`.
+Run with degfaults: `cargo run`
+
+### [Day 9 part2](./day9_part2)
+Written in rust
+Input file defaults to `input_sample.txt`, otherwise pass in a file name like so `cargo run -- my_input.txt`.
+Run with defaults: `cargo run`
+ 
+

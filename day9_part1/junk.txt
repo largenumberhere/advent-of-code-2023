@@ -1,0 +1,80 @@
+/// Some code I don't have the heart to delete, but they're not used
+
+
+fn iter_2nd_lasts_rev<'a>(jagged_array: &'a Vec<Vec<u32>>) -> impl Iterator<Item = &u32> + 'a {
+    let mut columns = jagged_array.iter().rev();
+
+    let second_lasts = core::iter::from_fn(move || {
+        let column = columns.next()?;
+        return column.get(column.len()-2);
+    });
+
+    return  second_lasts;
+
+}
+
+
+fn iter_lasts_rev<'a> (jagged_array: &'a Vec<Vec<u32>>) -> impl Iterator<Item = &u32> + 'a {
+    let mut columns = jagged_array.iter().rev();
+
+    let lasts = core::iter::from_fn(move || {
+        let column = columns.next()?;
+        return column.last();
+    });
+
+    return  lasts.into_iter();
+}
+
+fn iter_lasts<'a> (jagged_array: &'a Vec<Vec<u32>>) -> impl Iterator<Item = &u32> + 'a {
+    let mut columns = jagged_array.iter();
+
+    let lasts = core::iter::from_fn(move || {
+        let column = columns.next()?;
+        return column.last();
+    });
+
+    return  lasts.into_iter();
+}
+
+fn iter_alternate<T>(mut iter1: impl Iterator<Item = T>, mut iter2: impl Iterator<Item = T>) -> impl Iterator<Item = T> {
+    enum Selected {
+        One,
+        Two
+    }
+
+    let mut selected = Selected::One;
+
+    let new_iter= core::iter::from_fn( move ||{
+        let output;
+
+        match selected {
+            Selected::One => {
+                output = iter1.next();
+                selected = Selected::Two;
+            }
+            Selected::Two => {
+                output = iter2.next();
+                selected = Selected::One;
+            }
+        }
+
+        return  output;
+
+    });
+
+    return new_iter;
+}
+
+
+fn iter_pairs<T>(mut iter1: impl Iterator<Item = T>, mut iter2: impl Iterator<Item = T>) -> impl Iterator<Item = (T, T)> {
+
+    let new_iter= core::iter::from_fn( move ||{
+        let left = iter1.next()?;
+        let right = iter2.next()?;
+
+        return Some( (left, right) );
+
+    });
+
+    return new_iter;
+}
