@@ -47,3 +47,7 @@ Input file defaults to `input_sample.txt`, otherwise pass in a file name like so
 Run with defaults: `cargo run`
  
 
+### [Day 15 part1](./day_15_part1/)
+Written with the Fasm assembler in x86_64 assembly in windows subsystem for linux. This will only work on x86_64 aka AMD64 processors.Should run fine in Linux. Uses handwritten libraries `read_to_buffer.inc`, `print_integer64.inc`. 
+A gnu-make `Makefile` is included with several command availible. Use `make` to build and run
+Input file defailts to `input.txt`. To change this, modify the string `input_file_name`'s value at the bottom of main.asm.  

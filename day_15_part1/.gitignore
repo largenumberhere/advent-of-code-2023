@@ -1,0 +1,7 @@
+# Auto-generated on makefile recipes
+./.gdbinit
+/main
+/main_symbols.fas
+
+# code I couldn't say goodbye to but has no use
+/junk.txt

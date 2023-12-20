@@ -1,0 +1,8 @@
+# IDE cache
+/.idea
+
+# Output foler
+/target
+
+# Cargo cache
+/Cargo.lock
